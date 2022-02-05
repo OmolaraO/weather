@@ -2,13 +2,14 @@ import React from "react";
 import axios from "axios";
 
 export default function Weather(props) {
+
   function handleResponse(response) {
 alert(response.main.data.temp)
 }
-
   let apiKey = "baf56f4471be4826660e97693ea45c45";
   let units = "metric";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.city}&appid=${apiKey}&units=${units}`;
+
   axios.get(apiUrl).then(handleResponse)
    
   let weatherData = {
@@ -75,3 +76,8 @@ alert(response.main.data.temp)
     </div>
   );
 }
+
+ <p>
+   <a href= "https://github.com/OmolaraO/weather">Open source code</a>by Omolara
+  </p>
+  
